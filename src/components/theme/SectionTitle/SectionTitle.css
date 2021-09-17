@@ -1,0 +1,30 @@
+.sectionTitle{
+    padding: 15px;
+    margin-left: 25px;
+    padding-top: 25px;
+}
+
+
+.sectionTitle h3{
+    color: #fff;
+    letter-spacing: 10px;
+    position: relative;
+    width: max-content;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.sectionTitle h3::before{
+    content: "";
+    width: 30%;
+    height: 100%;
+    padding-bottom: 15px;
+    position: absolute;
+    border-bottom: 1px solid yellow;
+    transition: .5s;
+}
+
+.sectionTitle h3:hover::before{
+    width: 100%;
+    transition: .5s;
+}

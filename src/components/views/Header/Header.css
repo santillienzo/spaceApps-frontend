@@ -1,0 +1,43 @@
+.header-container{
+    background-image: url('../../../assets/Background/fondo_welcome.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-present_box{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-present_box .header-text{
+    color: var(--main-text-color);
+}
+
+.header-present_box .header-text h3{
+    font-size: 2rem;
+}
+
+.header-present_box .header-text p{
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.header-present_box .header-btn{
+    background-color: #ccc;
+    padding: 10px;
+    border-radius: 25px;
+    margin-top: 20px;
+    color: var(--second-text-color);
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 780px){
+    
+}
