@@ -75,3 +75,10 @@ a{
   --dark-tertiary-color:#5172F8;
   --dark-primary-text_color: #fff;
 }
+
+.non-selectable {
+  -moz-user-select: none; 
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none; 
+}

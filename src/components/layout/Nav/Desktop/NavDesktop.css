@@ -1,0 +1,78 @@
+.navDesk-container{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+}
+
+.navDesk-logo{
+    width: 50px;
+}
+
+.navDesk-logo img{
+    width: 100%;
+}
+
+.navDesk-menu ul{
+    display: flex;
+    font-size: 1rem;
+}
+
+.navDesk-menu ul .link{
+    padding: 5px 10px;
+    margin: 0 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.navDesk-menu ul .link::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    width: 0%;
+    height: 0%;
+    box-sizing: border-box;
+}
+.navDesk-menu ul .link::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    width: 0%;
+    height: 0%;
+    box-sizing: border-box;
+}
+
+.navDesk-menu ul .link:hover::before{
+    border-top: 1px solid var(--global-secondary-color);
+    border-left: 1px solid var(--global-secondary-color);
+    animation: navItemEffect 1s ease forwards;
+}
+.navDesk-menu ul .link:hover::after{
+    border-bottom: 1px solid var(--global-secondary-color);
+    border-right: 1px solid var(--global-secondary-color);
+    animation: navItemEffect 1s ease forwards;
+}
+
+
+@keyframes navItemEffect {
+    0%{
+        width: 0%;
+        height: 0%;
+    }
+    50%{
+        width: 100%;
+        height: 0;
+    }
+    100%{
+        width: 100%;
+        height: 100%;
+    }
+}

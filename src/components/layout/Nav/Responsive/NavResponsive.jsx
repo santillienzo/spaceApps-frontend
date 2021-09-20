@@ -31,10 +31,10 @@ const MenuResponsive = ({close, menuHeight})=>{
                 <div className="navRes-menu_container">
                     <nav>
                         <LinkScroll className="li" to="home" smooth duration={500} onClick={handleClose}>Inicio</LinkScroll>
-                        <LinkScroll className="li" to="about">Nosotros</LinkScroll>
-                        <LinkScroll className="li" to="service">Servicios</LinkScroll>
-                        <LinkScroll className="li" to="works">Portafolio</LinkScroll>
-                        <LinkScroll className="li" to="contact">Contacto</LinkScroll>
+                        <LinkScroll className="li" to="about" smooth duration={500}>Nosotros</LinkScroll>
+                        <LinkScroll className="li" to="service" smooth duration={500}>Servicios</LinkScroll>
+                        <LinkScroll className="li" to="works" smooth duration={500}>Portafolio</LinkScroll>
+                        <LinkScroll className="li" to="contact" smooth duration={500}>Contacto</LinkScroll>
                     </nav>
                 </div>
             </div>

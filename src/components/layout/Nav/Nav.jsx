@@ -9,6 +9,7 @@ import logo_O from '../../../assets/Logo/Logo_orange.png';
 
 //Components
 import NavResponsive from './Responsive/NavResponsive';
+import NavDesktop from './Desktop/NavDesktop';
 
 const Nav = ({menuHeightNavToHome}) => {
     if (window.screen.width <= 780) {
@@ -17,7 +18,7 @@ const Nav = ({menuHeightNavToHome}) => {
         );
     }else{
         return(
-            <div></div>
+            <NavDesktop logo={logo_O}/>
         )
     }
 };

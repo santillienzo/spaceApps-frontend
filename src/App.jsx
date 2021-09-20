@@ -24,7 +24,7 @@ function App() {
 
 
   return (
-    <div className="App" style={{marginTop:`${menuResHeight}px`}}>
+    <div className="App" style={{paddingTop:`${menuResHeight}px`}}>
       <Router >
         <Nav 
           menuHeightNavToHome={menuHeightNavToHome}

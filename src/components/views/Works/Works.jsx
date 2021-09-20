@@ -35,7 +35,7 @@ const Works = () => {
 
     return (
         <div id="works">
-            <SectionTitle title="Trabajos"/>
+            <SectionTitle title="Clientes"/>
             <div className="works-container">
                 {
                     content.map((e,i)=>(
