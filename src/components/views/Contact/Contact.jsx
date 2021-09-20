@@ -1,7 +1,7 @@
 import React from 'react';
 import './Contact.css'
 
-import mail from "../../../assets/Icons/sobre.png"
+import mail from "../../../assets/SVG/contact/email.svg"
 
 import SectionTitle from '../../theme/SectionTitle/SectionTitle';
 
@@ -12,9 +12,6 @@ const Contact = () => {
             <div className="contact-container">
                 <div className="contact-email_img">
                     <img src={mail} alt="" />
-                </div>
-                <div className="contact-text_ref">
-                    <p>Envíanos un e-mail</p>
                 </div>
                 <div className="contact-form_container">
                     <form action="">
@@ -34,7 +31,6 @@ const Contact = () => {
                         <li><a href="https://www.facebook.com/spaceappsdev"><i className="fab fa-facebook-f"></i></a></li>
                         <li><a href="https://www.instagram.com/spaceappsdev/?hl=es-la"><i className="fab fa-instagram"></i></a></li>
                         <li><a href="https://twitter.com/spaceappsdev"><i className="fab fa-twitter"></i></a></li>
-                        <li><a href="https://www.youtube.com/channel/UCF3KM2RqfJmg-bJLQoOTMuQ"><i className="fab fa-youtube"></i></a></li>
                     </ul>
                 </div>
             </div>

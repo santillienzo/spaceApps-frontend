@@ -6,7 +6,7 @@
 
 
 .sectionTitle h3{
-    color: #fff;
+    color: var(--global-text_color);
     letter-spacing: 10px;
     position: relative;
     width: max-content;
@@ -20,7 +20,7 @@
     height: 100%;
     padding-bottom: 15px;
     position: absolute;
-    border-bottom: 1px solid yellow;
+    border-bottom: 1px solid var(--global-secondary-color);
     transition: .5s;
 }
 

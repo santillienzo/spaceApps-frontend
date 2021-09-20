@@ -4,8 +4,8 @@ import './About.css'
 
 //Assets
 import img1 from '../../../assets/Logo/Banner.jpg'
-import img2 from '../../../assets/Images/coffee.jpg'
-import img3 from '../../../assets/Icons/objetivo.png'
+import img2 from '../../../assets/SVG/about/about1.svg'
+import img3 from '../../../assets/SVG/about/about2.svg'
 
 const SectionAbout = ({title, paragraph, img})=>{
 

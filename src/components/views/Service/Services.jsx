@@ -2,10 +2,10 @@ import React from 'react';
 import './Services.css'
 
 //Assets
-import img1 from '../../../assets/Icons/webDesignPng.png'
-import img2 from '../../../assets/Icons/mantenimiento.png'
-import img3 from '../../../assets/Icons/hosting.png'
-import img4 from '../../../assets/Icons/www.png'
+import webDesign from '../../../assets/SVG/service/webDesign.svg'
+import socialMedia from '../../../assets/SVG/service/socialMedia.svg'
+import cm from '../../../assets/SVG/service/cm.svg'
+import campaign from '../../../assets/SVG/service/campaign.svg'
 
 
 import SectionTitle from '../../theme/SectionTitle/SectionTitle';
@@ -32,25 +32,25 @@ const Services = () => {
 
     const content= [
         {
+            title: "Social Media Plan",
+            description:<p key="p1">Te brindamos el mejor soporte, mantenimiento y estrategias SEO para que tu web esté siempre en lo más alto.</p>,
+            img: socialMedia,
+        },
+        {
+            title: "Community manager",
+            description:<p key="p1">Te alojamos tu página web en los mejores y más confiables servidores.</p>,
+            img: cm,
+        },
+        {
+            title: "Estrategia y gestión de publicidad",
+            description:[<p key="p1">Te ofrecemos de manera GRATIS un dominio personalizado.</p>,
+            <p key="p2">Por ejemplo: www.tudominio.com</p>],
+            img: campaign,
+        },
+        {
             title: "Diseño web",
             description:<p key="p1">Diseñamos tu página web a medida, utilizando las mejores estrategias de seguridad y diseño multiplataforma para que tu web sea lo más completa posible.</p>,
-            img: img1,
-        },
-        {
-            title: "Mantenimiento",
-            description:<p key="p1">Te brindamos el mejor soporte, mantenimiento y estrategias SEO para que tu web esté siempre en lo más alto.</p>,
-            img: img2,
-        },
-        {
-            title: "Host",
-            description:<p key="p1">Te alojamos tu página web en los mejores y más confiables servidores.</p>,
-            img: img3,
-        },
-        {
-            title: "Dominio",
-            description:[<p key="p1">Te ofrecemos de manera GRATIS un dominio personalizado.</p>,
-                <p key="p2">Por ejemplo: www.tudominio.com</p>],
-            img: img4,
+            img: webDesign,
         },
     ];
 

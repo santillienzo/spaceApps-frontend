@@ -9,6 +9,7 @@
 .sectionAbout-container{
     color: var(--main-text-color);
     text-align: center;
+    color: var(--global-text_color);
 }
 
 .sectionAbout-container h4{

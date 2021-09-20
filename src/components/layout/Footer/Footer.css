@@ -1,0 +1,13 @@
+.footer-container{
+    background-color: var(--global-gray4);
+    padding: 5px;
+}
+
+.footer-container p{
+    color: var(--global-primary-color);
+    font-size: rem;
+}
+
+.footer-container p span{
+    color: var(--global-secondary-color);
+}

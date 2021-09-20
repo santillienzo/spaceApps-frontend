@@ -7,6 +7,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 25px;
+    border-bottom: 1px solid var(--global-gray2);
+    background-color: var(--global-primary-color);
+    z-index: 100;
 }
 
 .navRes-logo{
@@ -22,7 +25,7 @@
 }
 
 .navRes-navIcon i{
-    color: var(--main-text-color);
+    color: var(--global-secondary-color);
     font-size: 2rem;
 }
 
@@ -51,17 +54,20 @@
 }
 
 .navRes-menu{
-    background-color: #333;
+    background-color: var(--global-gray);
     height: 100vh;
     width: 70%;
     border-left: 2px solid #aaa;
     z-index: 10000 !important;
+    color: var(--global-text_color);
 }
 
 .navRes-menu_close{
-    padding: 20px 15px;
-    border-bottom: 1px solid #aaa;
-    color: var(--main-text-color);
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+    border-bottom: 1px solid var(--global-gray2);
+    color: var(--global-text_color);
 }
 
 .navRes-menu_container nav{
@@ -72,5 +78,5 @@
 
 .navRes-menu_container nav .li{
     padding: 15px 15px;
-    border-bottom: 1px solid #444;
+    /* border-bottom: 1px solid var(--global-gray2); */
 }

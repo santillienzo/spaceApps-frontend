@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './NavResponsive.css'
 
 import {
     Link as LinkScroll 
 } from 'react-scroll'
 
-const MenuResponsive = ({close})=>{
+const MenuResponsive = ({close, menuHeight})=>{
 
     const handleClose = ()=>{
         const menu = document.getElementById('navRes-menu');
@@ -25,7 +25,7 @@ const MenuResponsive = ({close})=>{
         <div className="navRes-menu-container">
             <div className="navRes-background animate__animated animate__fadeIn" onClick={handleClose} id="navRes-background"></div>
             <div className="navRes-menu animate__animated animate__fadeInRightBig animate__fast" id="navRes-menu">
-                <div className="navRes-menu_close">
+                <div className="navRes-menu_close" style={{height:menuHeight}}>
                     <i className="fas fa-times" onClick={handleClose}></i>
                 </div>
                 <div className="navRes-menu_container">
@@ -46,10 +46,17 @@ const MenuResponsive = ({close})=>{
 
 const NavResponsive = ({logo}) => {
     const [menu, setMenu] = useState(false)
+    const [menuHeight, setMenuHeight] = useState(0)
+
+    
+    useEffect(()=>{
+        const menu_container = document.getElementById('menu-container');
+        setMenuHeight(menu_container.clientHeight)
+    }, [])
 
     return (
         <>
-        <div className="navRes-container">
+        <div className="navRes-container" id="menu-container">
             <div className="navRes-logo">
                 <img src={logo} alt="" />
             </div>
@@ -60,7 +67,7 @@ const NavResponsive = ({logo}) => {
         {
             menu ?
             (
-                <MenuResponsive close={()=> setMenu(false)}/>
+                <MenuResponsive close={()=> setMenu(false)} menuHeight={menuHeight}/>
             ):('')
         }
         </>
