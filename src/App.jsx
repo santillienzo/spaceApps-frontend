@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import './App.css';
 
 import {
@@ -14,10 +15,20 @@ import Contact from './components/views/Contact/Contact';
 import Footer from './components/layout/Footer/Footer';
 
 function App() {
+
+  const [menuResHeight, setMenuResHeight] = useState(0);
+
+  const menuHeightNavToHome = (height)=>{
+    setMenuResHeight(height)
+  }
+
+
   return (
-    <div className="App">
-      <Router>
-        <Nav/>
+    <div className="App" style={{marginTop:`${menuResHeight}px`}}>
+      <Router >
+        <Nav 
+          menuHeightNavToHome={menuHeightNavToHome}
+        />
         <Switch>
           <Route path="/" exact>
             <Header/>

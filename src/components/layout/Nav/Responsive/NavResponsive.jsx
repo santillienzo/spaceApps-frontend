@@ -44,7 +44,7 @@ const MenuResponsive = ({close, menuHeight})=>{
 }
 
 
-const NavResponsive = ({logo}) => {
+const NavResponsive = ({logo, menuHeightNavToHome}) => {
     const [menu, setMenu] = useState(false)
     const [menuHeight, setMenuHeight] = useState(0)
 
@@ -52,7 +52,8 @@ const NavResponsive = ({logo}) => {
     useEffect(()=>{
         const menu_container = document.getElementById('menu-container');
         setMenuHeight(menu_container.clientHeight)
-    }, [])
+        menuHeightNavToHome(menuHeight)
+    }, [menuHeight])
 
     return (
         <>
