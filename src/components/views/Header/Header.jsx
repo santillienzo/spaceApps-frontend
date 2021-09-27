@@ -19,6 +19,7 @@ const Header = () => {
             <div className="header-image">
                 <img src={svg} alt="" />
             </div>
+            
         </div>
     );
 };

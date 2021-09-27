@@ -34,7 +34,7 @@ function App() {
             <Header/>
             <About/>
             <Services/>
-            <Works/>
+            {/* <Works/> */}
             <Contact/>
           </Route>
         </Switch>

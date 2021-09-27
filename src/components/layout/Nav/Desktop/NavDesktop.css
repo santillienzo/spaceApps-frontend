@@ -7,6 +7,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.8rem;
+    z-index: 1000;
 }
 
 .navDesk-logo{
@@ -19,14 +20,16 @@
 
 .navDesk-menu ul{
     display: flex;
-    font-size: 1rem;
 }
 
 .navDesk-menu ul .link{
+    font-size: 1rem;
+    font-weight: 400;
     padding: 5px 10px;
     margin: 0 15px;
     cursor: pointer;
     position: relative;
+    color: var(--global-text_color);
 }
 
 .navDesk-menu ul .link::before{
@@ -53,12 +56,12 @@
 .navDesk-menu ul .link:hover::before{
     border-top: 1px solid var(--global-secondary-color);
     border-left: 1px solid var(--global-secondary-color);
-    animation: navItemEffect 1s ease forwards;
+    animation: navItemEffect .7s ease forwards;
 }
 .navDesk-menu ul .link:hover::after{
     border-bottom: 1px solid var(--global-secondary-color);
     border-right: 1px solid var(--global-secondary-color);
-    animation: navItemEffect 1s ease forwards;
+    animation: navItemEffect .7s ease forwards;
 }
 
 

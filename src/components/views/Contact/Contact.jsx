@@ -1,19 +1,21 @@
 import React from 'react';
 import './Contact.css'
 
-import mail from "../../../assets/SVG/contact/email.svg"
+import email from "../../../assets/SVG/contact/email.svg"
+import mail from "../../../assets/SVG/contact/mail.svg"
 
 import SectionTitle from '../../theme/SectionTitle/SectionTitle';
+import SocialMedia from './SocialMedia/SocialMedia';
 
 const Contact = () => {
     return (
         <div id="contact">
             <SectionTitle title="Contacto"/>
             <div className="contact-container">
-                <div className="contact-email_img">
-                    <img src={mail} alt="" />
-                </div>
                 <div className="contact-form_container">
+                    <div className="contact-email_img">
+                        <img src={email} alt="" />
+                    </div>
                     <form action="">
                         <input type="text" placeholder="Nombre y apellido"/>
                         <input type="text" placeholder="Dirección de correo electrónico"/>
@@ -23,16 +25,21 @@ const Contact = () => {
                         <button>Enviar</button>
                     </form>
                 </div>
-            </div>
-            <div className="socialMedia-container">
-                <div className="redes_sociales">
-                    <ul>
-                        <li><a href="https://wa.me/542634786580"><i className="fab fa-whatsapp"></i></a></li>
-                        <li><a href="https://www.facebook.com/spaceappsdev"><i className="fab fa-facebook-f"></i></a></li>
-                        <li><a href="https://www.instagram.com/spaceappsdev/?hl=es-la"><i className="fab fa-instagram"></i></a></li>
-                        <li><a href="https://twitter.com/spaceappsdev"><i className="fab fa-twitter"></i></a></li>
-                    </ul>
-                </div>
+                {
+                    window.screen.width >= 780 ?
+                    (
+                        <div className="socialMedia-container_container">
+                            <div className="socialMedia-svg_container">
+                                <img src={mail} alt="" />
+                            </div>
+                            <SocialMedia/>
+                        </div>
+                    )
+                    :
+                    (
+                    <SocialMedia/>
+                    )
+                }
             </div>
         </div>
     );

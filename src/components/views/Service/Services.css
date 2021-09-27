@@ -10,7 +10,6 @@
     width: 140px;
     height: 140px;
     margin: 2rem;
-    /* background-color: red; */
 }
 
 .service-cover{
@@ -37,4 +36,43 @@
 
 .service-description{
     display: none;
+}
+
+@media screen and (min-width: 780px){
+    .services-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding:0 8%0}
+    
+    .service-container{
+        width: 165px;
+        height: 165px;
+    }
+    
+    .service-cover{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .service-img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .service-img img{
+        width: 100%;
+    }
+    
+    .service-cover h5{
+        text-align: center;
+        margin-top: 5px;
+        font-size: 1rem;
+    }
+    
+    .service-description{
+        display: none;
+    }    
 }
