@@ -41,7 +41,7 @@
     backdrop-filter: blur(2px);
     transition: 0.5s;
     overflow: hidden;
-    background-color: var(--global-gray);
+    background-color: var(--global-social_media-background);
 }
 
 .redes_sociales ul li a:hover{

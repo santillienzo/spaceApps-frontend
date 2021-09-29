@@ -40,14 +40,16 @@
     padding: 10px 5px;
     width: 100%;
     border: none;
-    border-bottom: 1px solid var(--global-gray3);
+    border-bottom: 1px solid var(--global-input_border-color);
     resize: none;
     font-size: 1rem;
+    color: var(--global-text_color);
 }
 
 .contact-form_container form input::placeholder,
 .contact-form_container form textarea::placeholder{
-    color: var(--global-gray2);
+    /* color: var(--global-gray2); */
+    color: var(--global-input_placeholder-color);
     font-size: 1rem;
 }
 

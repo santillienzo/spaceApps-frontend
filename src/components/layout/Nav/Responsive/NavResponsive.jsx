@@ -5,7 +5,7 @@ import {
     Link as LinkScroll 
 } from 'react-scroll'
 
-const MenuResponsive = ({close, menuHeight})=>{
+const MenuResponsive = ({close, menuHeight, setDarkMode})=>{
 
     const handleClose = ()=>{
         const menu = document.getElementById('navRes-menu');
@@ -35,6 +35,12 @@ const MenuResponsive = ({close, menuHeight})=>{
                         <LinkScroll className="li" to="service" onClick={handleClose} activeClass="activeResponsiveLink" spy>Servicios</LinkScroll>
                         <LinkScroll className="li" to="contact" onClick={handleClose} activeClass="activeResponsiveLink" spy>Contacto</LinkScroll>
                         {/* <LinkScroll className="li" to="works" smooth duration={500}>Portafolio</LinkScroll> */}
+                        <div className="nigthDay-container">
+                            <label>
+                                <input type="checkbox" className="input-nigthDay" onClick={(e) => setDarkMode(e.target.checked)}/>
+                                <span className="check"></span>
+                            </label>
+                        </div>
                     </nav>
                 </div>
             </div>
@@ -44,7 +50,7 @@ const MenuResponsive = ({close, menuHeight})=>{
 }
 
 
-const NavResponsive = ({logo, menuHeightNavToHome}) => {
+const NavResponsive = ({logo, menuHeightNavToHome, setDarkMode}) => {
     const [menu, setMenu] = useState(false)
     const [menuHeight, setMenuHeight] = useState(0)
 
@@ -61,6 +67,7 @@ const NavResponsive = ({logo, menuHeightNavToHome}) => {
             <div className="navRes-logo">
                 <img src={logo} alt="" />
             </div>
+            
             <div className="navRes-navIcon">
                 <i className="fas fa-bars" onClick={()=> setMenu(true)}></i>
             </div>
@@ -68,7 +75,7 @@ const NavResponsive = ({logo, menuHeightNavToHome}) => {
         {
             menu ?
             (
-                <MenuResponsive close={()=> setMenu(false)} menuHeight={menuHeight}/>
+                <MenuResponsive setDarkMode={setDarkMode} close={()=> setMenu(false)} menuHeight={menuHeight}/>
             ):('')
         }
         </>
