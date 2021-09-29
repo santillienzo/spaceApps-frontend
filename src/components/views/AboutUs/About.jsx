@@ -7,10 +7,10 @@ import img from '../../../assets/Logo/Banner.jpg'
 import img1 from '../../../assets/SVG/about/about1.svg'
 import img2 from '../../../assets/SVG/about/about2.svg'
 
-const SectionAbout = ({title, paragraph, img, imageClass, itemClass})=>{
+const SectionAbout = ({title, paragraph, img, imageClass, itemClass, data_wow_delay})=>{
 
     return(
-        <div className={"sectionAbout-container " + itemClass}>
+        <div className={"sectionAbout-container " + itemClass} data-wow-delay={data_wow_delay}>
             <div>
                 <h4>{title}</h4>
                 <div className="sectionAbout-paragraph">{paragraph}</div>
@@ -34,7 +34,8 @@ const About = () => {
                 ], 
             image:img1,
             imageClass:"about-svg_img",
-            itemClass: ""
+            itemClass: "wow animate__animated animate__backInRight",
+            data_wow_delay:""
         },
         {
             title:"Objetivos",
@@ -43,7 +44,8 @@ const About = () => {
                         <p key="p3">Buscamos innovar y mejorar cada día un poquito más, porque, como ya se sabe, cada grano de arena cuenta...</p>],
             image:img2,
             imageClass:"about-svg_img",
-            itemClass: "sectionAbout-container_inverse"
+            itemClass: "sectionAbout-container_inverse wow animate__animated animate__backInRight",
+            data_wow_delay: window.screen.width >= 780 ? ("0.3s"):("")
         }
 
     ]
@@ -61,6 +63,7 @@ const About = () => {
                         key={i}
                         imageClass={e.imageClass}
                         itemClass={e.itemClass}
+                        data_wow_delay={e.data_wow_delay}
                     />
                 ))
             }

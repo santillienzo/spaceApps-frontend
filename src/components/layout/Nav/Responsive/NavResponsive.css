@@ -78,5 +78,12 @@
 
 .navRes-menu_container nav .li{
     padding: 15px 15px;
+    transition: .2s;
     /* border-bottom: 1px solid var(--global-gray2); */
+}
+
+.activeResponsiveLink{
+    background-color: var(--global-secondary-color);
+    color: #fff !important;
+    transition: .5s;
 }

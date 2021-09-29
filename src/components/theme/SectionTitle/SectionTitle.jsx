@@ -3,7 +3,7 @@ import './SectionTitle.css'
 
 const SectionTitle = ({title}) => {
     return (
-    <div className="sectionTitle">
+    <div className="sectionTitle ">
         <h3>{title}</h3>
     </div>
     );

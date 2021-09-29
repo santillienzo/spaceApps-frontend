@@ -26,10 +26,11 @@
     font-size: 1rem;
     font-weight: 400;
     padding: 5px 10px;
-    margin: 0 15px;
+    margin: 0 10px;
     cursor: pointer;
     position: relative;
     color: var(--global-text_color);
+    transition: .2s;
 }
 
 .navDesk-menu ul .link::before{
@@ -64,6 +65,12 @@
     animation: navItemEffect .7s ease forwards;
 }
 
+.activeDesktopLink{
+    background-color: var(--global-secondary-color);
+    color: #fff !important;
+    transition: .5s;
+    border-radius: 5px;
+}
 
 @keyframes navItemEffect {
     0%{
