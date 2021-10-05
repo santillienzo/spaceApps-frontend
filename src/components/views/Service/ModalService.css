@@ -72,6 +72,11 @@ box-shadow: inset 0px 0px 0px 0px #F0F0F0;
     margin: 10px 0;
 }
 
+.modalService-text li{
+    list-style: inside;
+    margin-left: 1rem;
+}
+
 .modalService-text_image{
     display: flex;
     align-items: center;
@@ -80,6 +85,17 @@ box-shadow: inset 0px 0px 0px 0px #F0F0F0;
 
 .modalService-text_image img{
     width: 100%;
+}
+
+.callToActionBtn-container{
+    background-color: var(--global-secondary-color);
+    width: max-content;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    display: block;
+    box-shadow: 0 0 3px 0px #222;
 }
 
 @media screen and (min-width: 780px){

@@ -11,6 +11,7 @@ import campaign from '../../../assets/SVG/service/campaign.svg'
 
 import SectionTitle from '../../theme/SectionTitle/SectionTitle';
 import BtnReadMore from '../../theme/BtnReadMore/BtnReadMore';
+import { Link as LinkScroll} from 'react-scroll';
 
 const ModalService = ({description, image, title, close})=>{
 
@@ -38,6 +39,9 @@ const ModalService = ({description, image, title, close})=>{
                 <div className="modalService-text">
                     <h5>{title}</h5>
                     <p>{description}</p>
+                    <LinkScroll to="contact" className="callToActionBtn-container" onClick={handleClose}>
+                        ¿Te quedan dudas? Escribinos!
+                    </LinkScroll>
                     <div className="modalService-text_image">
                         <img src={image} alt="" />
                     </div>
@@ -95,7 +99,15 @@ const Services = () => {
         },
         {
             title: "Diseño web",
-            description:<p key="p1">Diseñamos tu página web a medida, </p>,
+            description:[<p key="p1">Hoy en día es vital para una empresa tener su propio sitio web, ya que brinda credibilidad ante los clientes potenciales y ayuda a ser visible en los buscadores.</p>,
+                        <p>Nosotros te ofrecemos la posibilidad de que puedas tener tu propia web! Aplicamos diseños únicos para que tu página se destaque entre tus competidores ayudandote a crecer en ventas e impactar positivamente con tus clientes.</p>,
+                        <p>Para que tu experiencia sea la mejor te ofrecemos lo siguiente: </p>,
+                        <ul>
+                            <li>Diseño y desarrollo web</li>
+                            <li>Mantenimiento</li>
+                            <li>Hosting</li>
+                            <li>Dominio</li>
+                        </ul>],
             img: webDesign,
             itemClass: "",
         },
