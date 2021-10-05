@@ -32,6 +32,10 @@
     font-size: 1.5rem;
 }
 
+.bigImage-service img{
+    width: 70%;
+}
+
 .service-description{
     display: none;
 }
@@ -66,9 +70,6 @@
     }
 
     
-    .bigImage-service img{
-        width: 70%;
-    }
     .service-cover h5{
         text-align: center;
         margin-top: 5px;
