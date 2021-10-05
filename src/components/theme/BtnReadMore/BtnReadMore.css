@@ -1,0 +1,61 @@
+.btn-readMore{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-readMore .button{
+    background-color: transparent;
+    color: var( --global-succesfully);
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+    padding: 5px 10px;
+}
+
+.btn-readMore .button::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    width: 0%;
+    height: 0%;
+    box-sizing: border-box;
+}
+
+.btn-readMore .button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    width: 0%;
+    height: 0%;
+    box-sizing: border-box;
+}
+
+.btn-readMore .button:hover::before{
+    border-top: 1px solid var( --global-succesfully);
+    border-left: 1px solid var( --global-succesfully);
+    animation: readMoreEffect .7s ease forwards;
+}
+.btn-readMore .button:hover::after{
+    border-bottom: 1px solid var( --global-succesfully);
+    border-right: 1px solid var( --global-succesfully);
+    animation: readMoreEffect .7s ease forwards;
+}
+
+@keyframes readMoreEffect {
+    0%{
+        width: 0%;
+        height: 0%;
+    }
+    50%{
+        width: 100%;
+        height: 0;
+    }
+    100%{
+        width: 100%;
+        height: 100%;
+    }
+}

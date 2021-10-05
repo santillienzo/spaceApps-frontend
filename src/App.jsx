@@ -10,7 +10,7 @@ import Nav from './components/layout/Nav/Nav';
 import Header from './components/views/Header/Header';
 import About from './components/views/AboutUs/About';
 import Services from './components/views/Service/Services';
-import Works from './components/views/Works/Works';
+// import Works from './components/views/Works/Works';
 import Contact from './components/views/Contact/Contact';
 import Footer from './components/layout/Footer/Footer';
 
@@ -64,6 +64,7 @@ function App() {
         <Nav 
           menuHeightNavToHome={menuHeightNavToHome}
           setDarkMode={setDarkMode}
+          darkMode= {darkMode}
         />
         <Switch>
           <Route path="/" exact>

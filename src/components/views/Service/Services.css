@@ -7,8 +7,6 @@
 }
 
 .service-container{
-    width: 140px;
-    height: 140px;
     margin: 2rem;
 }
 
@@ -31,7 +29,7 @@
 .service-cover h5{
     text-align: center;
     margin-top: 5px;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .service-description{
@@ -43,11 +41,12 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding:0 8%0}
+        padding:0 8%
+    }
     
     .service-container{
-        width: 165px;
-        height: 165px;
+        padding: 15px;
+        width: 35%;
     }
     
     .service-cover{
@@ -65,11 +64,15 @@
     .service-img img{
         width: 100%;
     }
+
+    .bigImage-service img{
+        width: 70%;
+    }
     
     .service-cover h5{
         text-align: center;
         margin-top: 5px;
-        font-size: 1rem;
+        /* font-size: 1rem; */
     }
     
     .service-description{

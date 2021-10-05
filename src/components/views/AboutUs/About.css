@@ -11,10 +11,6 @@
     color: var(--global-text_color);
 }
 
-.sectionAbout-container h4{
-    font-size: 1.5rem;
-}
-
 .sectionAbout-paragraph{
     font-size: 1rem;
     text-align: justify;
@@ -41,7 +37,7 @@
 
 @media screen and (min-width: 780px){
     .about-sections{
-        padding: 4% 8%;
+        padding: 0 4%;
         display: flex;
     }
     
@@ -49,38 +45,44 @@
 
     .sectionAbout-container{
         color: var(--global-text_color);
-    }
-
-    .sectionAbout-container_inverse{
         display: flex;
-        flex-direction: column-reverse;
-    }
-    
-    .sectionAbout-container h4{
-        text-align: center;
-        font-size: 1.5rem;
+        align-items: center;
     }
     
     .sectionAbout-paragraph{
         font-size: 1rem;
         text-align: justify;
     }
+
+    .sectionAbout-paragraph p{
+        margin-bottom: 5px;
+    }
+
+    .sectionAbout-paragraph span{
+        color: var(--global-secondary-color);
+    }
+
+    .sectionAbout-paragraph span.name{
+        color: var(--global-secondary-color);
+        font-weight: bold;
+    }
+
     
     .sectionAbout-img{
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 2rem 0;
+        margin: 0;
     }
     
     .sectionAbout-img img{
-        width: 90%;
+        width: 100%;
         border-radius: 25px;
     }
     
     .sectionAbout-img .about-svg_img{
-        width: 40%;
+        width: 50%;
         border-radius: 0px;
     }
 }

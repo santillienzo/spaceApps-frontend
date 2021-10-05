@@ -5,7 +5,7 @@ import {
     Link as LinkScroll 
 } from 'react-scroll'
 
-const MenuResponsive = ({close, menuHeight, setDarkMode})=>{
+const MenuResponsive = ({close, menuHeight, setDarkMode, darkMode})=>{
 
     const handleClose = ()=>{
         const menu = document.getElementById('navRes-menu');
@@ -18,6 +18,10 @@ const MenuResponsive = ({close, menuHeight, setDarkMode})=>{
         setTimeout(()=>{
             close();
         }, 800)
+    }
+
+    const changeTheme = (e)=>{
+        setDarkMode(e.target.checked)
     }
 
     return (
@@ -37,7 +41,7 @@ const MenuResponsive = ({close, menuHeight, setDarkMode})=>{
                         {/* <LinkScroll className="li" to="works" smooth duration={500}>Portafolio</LinkScroll> */}
                         <div className="nigthDay-container">
                             <label>
-                                <input type="checkbox" className="input-nigthDay" onClick={(e) => setDarkMode(e.target.checked)}/>
+                                <input type="checkbox" className="input-nigthDay" onChange={changeTheme} checked={darkMode}/>
                                 <span className="check"></span>
                             </label>
                         </div>
@@ -50,7 +54,7 @@ const MenuResponsive = ({close, menuHeight, setDarkMode})=>{
 }
 
 
-const NavResponsive = ({logo, menuHeightNavToHome, setDarkMode}) => {
+const NavResponsive = ({logo, menuHeightNavToHome, setDarkMode, darkMode}) => {
     const [menu, setMenu] = useState(false)
     const [menuHeight, setMenuHeight] = useState(0)
 
@@ -75,7 +79,7 @@ const NavResponsive = ({logo, menuHeightNavToHome, setDarkMode}) => {
         {
             menu ?
             (
-                <MenuResponsive setDarkMode={setDarkMode} close={()=> setMenu(false)} menuHeight={menuHeight}/>
+                <MenuResponsive darkMode={darkMode} setDarkMode={setDarkMode} close={()=> setMenu(false)} menuHeight={menuHeight}/>
             ):('')
         }
         </>

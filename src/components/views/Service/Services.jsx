@@ -9,15 +9,17 @@ import campaign from '../../../assets/SVG/service/campaign.svg'
 
 
 import SectionTitle from '../../theme/SectionTitle/SectionTitle';
+import BtnReadMore from '../../theme/BtnReadMore/BtnReadMore';
 
-const Service = ({title,description,img, data_wow_delay})=>{
+const Service = ({title,description,img, itemClass})=>{
     return(
-        <div className="service-container wow animate__animated animate__backInRight" data-wow-delay={data_wow_delay}>
+        <div className={"service-container wow animate__animated animate__backInRight " + itemClass}>
             <div className="service-cover">
                 <div className="service-img">
                     <img src={img} alt="" />
                 </div>
                 <h5>{title}</h5>
+                <BtnReadMore/>
             </div>
             <div className="service-description">
                 {
@@ -35,26 +37,26 @@ const Services = () => {
             title: "Social Media Plan",
             description:<p key="p1">Te brindamos el mejor soporte, mantenimiento y estrategias SEO para que tu web esté siempre en lo más alto.</p>,
             img: socialMedia,
-            data_wow_delay:window.screen.width >= 780 ? ("0.2s"):("")
+            itemClass: "",
         },
         {
             title: "Community manager",
             description:<p key="p1">Te alojamos tu página web en los mejores y más confiables servidores.</p>,
             img: cm,
-            data_wow_delay:window.screen.width >= 780 ? ("0.4s"):("")
+            itemClass: "",
         },
         {
             title: "Estrategia y gestión de publicidad",
             description:[<p key="p1">Te ofrecemos de manera GRATIS un dominio personalizado.</p>,
             <p key="p2">Por ejemplo: www.tudominio.com</p>],
             img: campaign,
-            data_wow_delay:window.screen.width >= 780 ? ("0.6s"):("")
+            itemClass: "bigImage-service",
         },
         {
             title: "Diseño web",
             description:<p key="p1">Diseñamos tu página web a medida, utilizando las mejores estrategias de seguridad y diseño multiplataforma para que tu web sea lo más completa posible.</p>,
             img: webDesign,
-            data_wow_delay:window.screen.width >= 780 ? ("0.8s"):("")
+            itemClass: "",
         },
     ];
 
@@ -70,7 +72,7 @@ const Services = () => {
                             title={e.title}
                             description={e.description}
                             img={e.img}
-                            data_wow_delay={e.data_wow_delay}
+                            itemClass={e.itemClass}
                         />
                     ))
                 }
