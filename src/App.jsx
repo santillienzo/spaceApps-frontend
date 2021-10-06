@@ -54,6 +54,8 @@ function App() {
 
   useEffect(()=>{
     changeTheme()
+
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [darkMode])
 
 

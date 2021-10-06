@@ -13,6 +13,8 @@ const NavResponsive = ({logo, menuHeightNavToHome, setDarkMode, darkMode}) => {
         const menu_container = document.getElementById('menu-container');
         setMenuHeight(menu_container.clientHeight)
         menuHeightNavToHome(menuHeight)
+
+        //eslint-disable-next-line react-hooks/exhaustive-deps
     }, [menuHeight])
 
     return (
