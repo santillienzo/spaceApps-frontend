@@ -60,8 +60,14 @@ const Services = () => {
         },
         {
             title: "Estrategia y gestión de publicidad",
-            description:[<p key="p1">Te ofrecemos de manera GRATIS un dominio personalizado.</p>,
-            <p key="p2">Por ejemplo: www.tudominio.com</p>],
+            description:[<p key="p1">Organizamos los distintos públicos, creamos las campañas y los anuncios para que tu empresa tenga la mayor efectividad en cuanto a la estrategia de publicidad paga implementada</p>,
+                        <p key="p2">Nos encargamos de:</p>,
+                        <ul>
+                            <li>Gestionar los públicos para cada estrategia</li>
+                            <li>Creamos las campañas de acuerdo a los objetivos seleccionados</li>
+                            <li>Aplicamos anuncios visualmente atractivos para los posibles clientes</li>
+                        </ul>
+                    ],
             img: campaign,
             itemClass: "bigImage-service",
             alt: "Ilustration megaphone in mail",
