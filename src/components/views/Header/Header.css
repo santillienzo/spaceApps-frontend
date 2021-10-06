@@ -9,41 +9,6 @@
     position: relative;
 }
 
-.mouse{
-    position: absolute;
-    height: 55px;
-    width: 40px;
-    background-image: radial-gradient(circle at 50% -20.71%, #d7c35d 0, #deba54 8.33%, #e4b04d 16.67%, #e9a546 25%, #ed9841 33.33%, #f0893e 41.67%, #f2793c 50%, #f3673d 58.33%, #f35542 66.67%, #f34249 75%, #f22b52 83.33%, #f0065d 91.67%, #ec0069 100%);    border-radius: 50%;
-    bottom: 50px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    animation: mouse 1s both infinite ease-out;
-}
-
-.mouse::after{
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 10px;
-    margin: auto;
-    content: '';
-    width: 3px;
-    height: 30%;
-    background-color: #000;
-}
-.mouse::before{
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0px;
-    margin: auto;
-    content: '';
-    width: 1px;
-    height: 30%;
-    background-color: #000;
-}
-
 .header-present_box {
     text-align: center;
     display: flex;
@@ -53,20 +18,17 @@
     z-index: 10;
 }
 
-.header-present_box .header-text {
-    color: var(--main-text-color);
-}
-
-.header-present_box .header-text h3 {
+.header-present_box .header-text h2 {
     font-size: 2rem;
 }
 
-.header-present_box .header-text h3 span {
+.header-present_box .header-text h2 span {
     color: var(--global-secondary-color);
 }
 
-.header-present_box .header-text p {
+.header-present_box .header-text h1 {
     font-size: 1.5rem;
+    font-weight: 400;
     margin: 0;
 }
 
@@ -101,20 +63,12 @@
 
 @media screen and (min-width: 780px) {
     .header-container {
-        display: flex;
         flex-direction: row;
-        align-items: center;
         justify-content: space-between;
-        /* padding-bottom: 1.5rem; */
         padding: 0 25px;
-        padding-bottom: 0;
     }
 
     .header-present_box {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         width: 45%;
     }
 
@@ -126,6 +80,7 @@
 
     .header-image img {
         width: 100%;
+        height: 100%;
     }
 }
 
@@ -210,23 +165,5 @@
     100% {
         -webkit-transform: scale3d(1, 1, 1);
         transform: scale3d(1, 1, 1);
-    }
-}
-
-
-@keyframes mouse {
-    0%{
-        /* top: 10px; */
-        bottom: 50px;
-    }
-    
-    50%{
-        bottom: 42px;
-        /* top: 13px; */
-    }
-    
-    100%{
-        bottom: 50px;
-        /* top: 10px; */
     }
 }

@@ -1,9 +1,6 @@
 import React from 'react';
-import './Nav.css';
 
 //Assets
-import logo_W from '../../../assets/Logo/Logo_blanco.png';
-import logo_B from '../../../assets/Logo/Logo_negro.png';
 import logo_O from '../../../assets/Logo/Logo_orange.png';
 
 

@@ -54,5 +54,3 @@ const About = () => {
 };
 
 export default About;
-
-// dando siempre la mejor atención y confort para nuestros clientes.

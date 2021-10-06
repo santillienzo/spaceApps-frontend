@@ -16,6 +16,7 @@
 
 .navDesk-logo img{
     width: 100%;
+    height: 100%;
 }
 
 
@@ -112,7 +113,6 @@
 
 .input-nigthDay:checked ~ .check{
     background: #fff;
-    /* box-shadow: 0 0 0 1200px #2c383d; */
 }
 
 .check::before{

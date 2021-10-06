@@ -10,7 +10,6 @@ import Nav from './components/layout/Nav/Nav';
 import Header from './components/views/Header/Header';
 import About from './components/views/AboutUs/About';
 import Services from './components/views/Service/Services';
-// import Works from './components/views/Works/Works';
 import Contact from './components/views/Contact/Contact';
 import Footer from './components/layout/Footer/Footer';
 
@@ -24,30 +23,32 @@ function App() {
   }
 
   const changeTheme = ()=>{
-    if (darkMode) {
-      document.documentElement.style.setProperty('--global-primary-color', 'var(--dark-primary-color)');
-      document.documentElement.style.setProperty('--global-secondary-color', 'var(--dark-secondary-color)');
-      document.documentElement.style.setProperty('--global-tertiary-color', 'var(--dark-tertiary-color)');
-      document.documentElement.style.setProperty('--global-inverse-color', 'var(--ligth-primary-color)');
-      document.documentElement.style.setProperty('--global-text_color', 'var(--dark-primary-text_color)');
-      
-      document.documentElement.style.setProperty('--global-input_placeholder-color', 'var(--global-gray)');
-      document.documentElement.style.setProperty('--global-input_border-color', 'var(--global-gray2)');
-      document.documentElement.style.setProperty('--global-social_media-background', 'var(--global-primary-color)');
+    const style = document.documentElement.style;
 
-      document.documentElement.style.setProperty('--global-menu_res-background', 'var(--global-gray4)');
+    if (darkMode) {
+      style.setProperty('--global-primary-color', 'var(--dark-primary-color)');
+      style.setProperty('--global-secondary-color', 'var(--dark-secondary-color)');
+      style.setProperty('--global-tertiary-color', 'var(--dark-tertiary-color)');
+      style.setProperty('--global-inverse-color', 'var(--ligth-primary-color)');
+      style.setProperty('--global-text_color', 'var(--dark-primary-text_color)');
+      
+      style.setProperty('--global-input_placeholder-color', 'var(--global-gray)');
+      style.setProperty('--global-input_border-color', 'var(--global-gray2)');
+      style.setProperty('--global-social_media-background', 'var(--global-primary-color)');
+
+      style.setProperty('--global-menu_res-background', 'var(--global-gray4)');
     }else{
-      document.documentElement.style.setProperty('--global-primary-color', 'var(--ligth-primary-color)');
-      document.documentElement.style.setProperty('--global-secondary-color', 'var(--ligth-secondary-color)');
-      document.documentElement.style.setProperty('--global-tertiary-color', 'var(--ligth-tertiary-color)');
-      document.documentElement.style.setProperty('--global-inverse-color', 'var(--dark-primary-color)');
-      document.documentElement.style.setProperty('--global-text_color', 'var(--ligth-primary-text_color)');
+      style.setProperty('--global-primary-color', 'var(--ligth-primary-color)');
+      style.setProperty('--global-secondary-color', 'var(--ligth-secondary-color)');
+      style.setProperty('--global-tertiary-color', 'var(--ligth-tertiary-color)');
+      style.setProperty('--global-inverse-color', 'var(--dark-primary-color)');
+      style.setProperty('--global-text_color', 'var(--ligth-primary-text_color)');
       
-      document.documentElement.style.setProperty('--global-input_placeholder-color', 'var(--global-gray2)');
-      document.documentElement.style.setProperty('--global-input_border-color', 'var(--global-gray3)');
-      document.documentElement.style.setProperty('--global-social_media-background', 'var(--global-gray)');
+      style.setProperty('--global-input_placeholder-color', 'var(--global-gray2)');
+      style.setProperty('--global-input_border-color', 'var(--global-gray3)');
+      style.setProperty('--global-social_media-background', 'var(--global-gray)');
       
-      document.documentElement.style.setProperty('--global-menu_res-background', 'var(--global-gray)');
+      style.setProperty('--global-menu_res-background', 'var(--global-gray)');
     }
   }
 
@@ -71,7 +72,6 @@ function App() {
             <Header/>
             <About/>
             <Services/>
-            {/* <Works/> */}
             <Contact/>
           </Route>
         </Switch>

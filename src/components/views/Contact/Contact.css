@@ -24,6 +24,7 @@
 
 .contact-email_img img{
     width: 100%;
+    height: 100%;
 }
 
 .contact-form_container form{
@@ -48,7 +49,6 @@
 
 .contact-form_container form input::placeholder,
 .contact-form_container form textarea::placeholder{
-    /* color: var(--global-gray2); */
     color: var(--global-input_placeholder-color);
     font-size: 1rem;
 }
@@ -59,8 +59,6 @@
     transition: border .3s linear;
     outline: none;
 }
-
-
 
 .contact-form_container form button{
     display: block;
@@ -92,13 +90,11 @@
 @media screen and (min-width: 780px){
     .contact-container{
         width: 90%;
-        display: flex;
         justify-content: space-between;
         flex-direction: row;
         padding: 0 0;
         flex-wrap: wrap;
     }
-
     
     .contact-form_container{
         width: 50%;
@@ -109,12 +105,11 @@
 
     .contact-email_img{
         width: 35%;
-        display: flex;
-        justify-content: center;
     }
-
+    
     .contact-email_img img{
         width: 100%;
+        height: 100%;
     }
 
     .contact-form_container form{

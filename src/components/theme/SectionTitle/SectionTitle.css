@@ -9,17 +9,19 @@
     color: var(--global-text_color);
     letter-spacing: 10px;
     position: relative;
-    width: max-content;
+    width: fit-content;
     text-transform: uppercase;
     font-size: 1.5rem;
 }
 
 .sectionTitle h3::before{
     content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 30%;
     height: 100%;
     padding-bottom: 15px;
-    position: absolute;
     border-bottom: 1px solid var(--global-secondary-color);
     transition: .5s;
 }

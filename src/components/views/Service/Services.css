@@ -6,6 +6,8 @@
     padding: 15px 0;
 }
 
+/* service */
+
 .service-container{
     margin: 2rem;
 }
@@ -24,6 +26,7 @@
 
 .service-img img{
     width: 100%;
+    height: 100%;
 }
 
 .service-cover h5{
@@ -34,16 +37,11 @@
 
 .bigImage-service img{
     width: 70%;
-}
-
-.service-description{
-    display: none;
+    height: 100%;
 }
 
 @media screen and (min-width: 780px){
     .services-container{
-        display: flex;
-        flex-wrap: wrap;
         justify-content: space-around;
         padding:0 8%;
     }
@@ -52,34 +50,4 @@
         padding: 15px;
         width: 35%;
     }
-    
-    .service-cover{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    
-    .service-img{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .service-img img{
-        width: 100%;
-    }
-
-    .bigImage-service img{
-        width: 70%;
-    }
-    
-    .service-cover h5{
-        text-align: center;
-        margin-top: 5px;
-        /* font-size: 1rem; */
-    }
-    
-    .service-description{
-        display: none;
-    }    
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import './NavDesktop.css';
 
 import {
-    Link as LinkScroll , animateScroll as scroll
+    Link as LinkScroll
 } from 'react-scroll'
 
 const NavDesktop = ({logo, setDarkMode}) => {
@@ -26,7 +26,6 @@ const NavDesktop = ({logo, setDarkMode}) => {
                     <LinkScroll className="link animate__animated animate__backInRight animate__delay-3s" activeClass="activeDesktopLink"  to="about"  spy={true}>Nosotros</LinkScroll>
                     <LinkScroll className="link animate__animated animate__backInRight animate__delay-4s" activeClass="activeDesktopLink"  to="service"  spy={true}>Servicios</LinkScroll>
                     <LinkScroll className="link animate__animated animate__backInRight animate__delay-5s" activeClass="activeDesktopLink"  to="contact"  spy={true}>Contacto</LinkScroll>
-                    {/* <LinkScroll className="link" to="works" smooth={true} duration={500}>Clientes</LinkScroll> */}
                 </ul>
             </div>
         </div>
