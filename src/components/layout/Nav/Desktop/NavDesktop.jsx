@@ -11,7 +11,7 @@ const NavDesktop = ({logo, setDarkMode}) => {
     return (
         <div className="navDesk-container">
             <div className="navDesk-logo  animate__animated animate__backInRight">
-                <img src={logo} alt="" />
+                <img src={logo} alt="Logo Space Apps" />
             </div>
             
             <div className="navDesk-menu">

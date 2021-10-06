@@ -14,7 +14,7 @@ const Contact = () => {
             <div className="contact-container">
                 <div className="contact-form_container">
                     <div className="contact-email_img wow animate__animated animate__backInLeft">
-                        <img src={email} alt="" />
+                        <img src={email} alt="Ilustration send e-mail" />
                     </div>
                     <form action="">
                         <input className="wow animate__animated animate__backInLeft" data-wow-delay="0s" type="text" placeholder="Nombre y apellido"/>
@@ -30,7 +30,7 @@ const Contact = () => {
                     (
                         <div className="socialMedia-container_container">
                             <div className="socialMedia-svg_container wow animate__animated animate__backInRight" data-wow-delay="1.6s">
-                                <img src={mail} alt="" />
+                                <img src={mail} alt="Ilustration mailbox on blue stain" />
                             </div>
                             <SocialMedia/>
                         </div>

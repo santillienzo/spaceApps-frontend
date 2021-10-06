@@ -3,7 +3,7 @@ import './ModalService.css'
 
 import { Link as LinkScroll} from 'react-scroll';
 
-const ModalService = ({description, image, title, close})=>{
+const ModalService = ({description, image, title, close, alt})=>{
 
     const handleClose = ()=>{
 
@@ -33,7 +33,7 @@ const ModalService = ({description, image, title, close})=>{
                         ¿Te quedan dudas? Escribinos!
                     </LinkScroll>
                     <div className="modalService-text_image">
-                        <img src={image} alt="" />
+                        <img src={image} alt={alt} />
                     </div>
                 </div>
             </div>

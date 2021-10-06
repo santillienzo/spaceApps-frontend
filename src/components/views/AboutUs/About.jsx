@@ -5,7 +5,7 @@ import './About.css'
 //Assets
 import img1 from '../../../assets/SVG/about/about1.svg'
 
-const SectionAbout = ({paragraph, img, imageClass})=>{
+const SectionAbout = ({paragraph, img, imageClass, alt})=>{
 
     return(
         <div className="sectionAbout-container " >
@@ -13,7 +13,7 @@ const SectionAbout = ({paragraph, img, imageClass})=>{
                 <div className="sectionAbout-paragraph">{paragraph}</div>
             </div>
             <div className="sectionAbout-img">
-                <img src={img} alt="sss" className={`${imageClass}`}/>
+                <img src={img} alt={alt} className={`${imageClass}`}/>
             </div>
         </div>
     )
@@ -30,6 +30,7 @@ const About = () => {
                 ], 
             image:img1,
             imageClass:"about-svg_img",
+            alt: "Cohete despegando de un celular",
         },
     ]
 
@@ -45,6 +46,7 @@ const About = () => {
                         img={e.image}
                         key={i}
                         imageClass={e.imageClass}
+                        alt={e.alt}
                     />
                 ))
             }

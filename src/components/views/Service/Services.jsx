@@ -12,7 +12,7 @@ import SectionTitle from '../../theme/SectionTitle/SectionTitle';
 import BtnReadMore from '../../theme/BtnReadMore/BtnReadMore';
 import ModalService from './ModalService/ModalService';
 
-const Service = ({title,description,img, itemClass})=>{
+const Service = ({title,description,img, itemClass, alt})=>{
     const[openModal, setOpenModal] = useState(false);
 
     return(
@@ -20,7 +20,7 @@ const Service = ({title,description,img, itemClass})=>{
         <div className={"service-container wow animate__animated animate__backInRight " + itemClass}>
             <div className="service-cover">
                 <div className="service-img">
-                    <img src={img} alt="" />
+                    <img src={img} alt={alt} />
                 </div>
                 <h5>{title}</h5>
                 <BtnReadMore open={setOpenModal}/>
@@ -29,7 +29,7 @@ const Service = ({title,description,img, itemClass})=>{
         {
             openModal ?
             (
-                <ModalService close={()=> setOpenModal(false)} description={description} title={title} image={img}/>
+                <ModalService close={()=> setOpenModal(false)} description={description} title={title} image={img} alt={alt}/>
             ):("")
         }
         </>
@@ -44,6 +44,7 @@ const Services = () => {
             description:<p key="p1">Ofrecemos un estudio de tu empresa. A partir de los datos obtenidos estableceremos objetivos, analizaremos los resultados, y podremos compararlos con los de la competencia. De esta forma definiremos las estrategias para mejorar el rendimiento de las redes sociales.</p>,
             img: socialMedia,
             itemClass: "",
+            alt: "Ilustration social media",
         },
         {
             title: "Community manager",
@@ -55,6 +56,7 @@ const Services = () => {
                         </ul>],
             img: cm,
             itemClass: "",
+            alt: "Ilustration community manager",
         },
         {
             title: "Estrategia y gestión de publicidad",
@@ -62,6 +64,7 @@ const Services = () => {
             <p key="p2">Por ejemplo: www.tudominio.com</p>],
             img: campaign,
             itemClass: "bigImage-service",
+            alt: "Ilustration megaphone in mail",
         },
         {
             title: "Diseño web",
@@ -76,6 +79,7 @@ const Services = () => {
                         </ul>],
             img: webDesign,
             itemClass: "",
+            alt: " Illustration web design pc and movil",
         },
     ];
 
@@ -92,6 +96,7 @@ const Services = () => {
                             description={e.description}
                             img={e.img}
                             itemClass={e.itemClass}
+                            alt={e.alt}
                         />
                     ))
                 }

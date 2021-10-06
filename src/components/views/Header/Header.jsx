@@ -23,7 +23,7 @@ const Header = () => {
                 </LinkScroll>
             </div>
             <div className="header-image wow animate__animated animate__fadeIn" data-wow-duration="1.5s">
-                <img src={svg} alt=""/>
+                <img src={svg} alt="Imagen de presentación Space Apps"/>
             </div>
             
         </div>

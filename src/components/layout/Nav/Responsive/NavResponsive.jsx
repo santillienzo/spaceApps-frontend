@@ -21,7 +21,7 @@ const NavResponsive = ({logo, menuHeightNavToHome, setDarkMode, darkMode}) => {
         <>
         <div className="navRes-container" id="menu-container">
             <div className="navRes-logo">
-                <img src={logo} alt="" />
+                <img src={logo} alt="Logo Space Apps" />
             </div>
             
             <div className="navRes-navIcon">
