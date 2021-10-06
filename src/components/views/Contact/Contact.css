@@ -126,4 +126,10 @@
     .socialMedia-svg_container{
         margin-bottom: 3rem;
     }
+
+    .socialMedia-svg_container img{
+        width: 100%;
+        height: 100%;
+    }
+
 }
