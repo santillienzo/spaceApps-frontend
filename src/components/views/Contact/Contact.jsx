@@ -73,6 +73,11 @@ const Contact = () => {
                 console.log(err)
             })
             setMsgSuccesfully(true)
+            setField({
+                name: false,
+                email:false,
+                subject:false
+            })
             e.target.reset();
         }else{
             setMsgSuccesfully(false)
@@ -86,25 +91,25 @@ const Contact = () => {
             {
                 msgSuccesfuly ?
                 (
-                <div className="mensaje_correcto">
-                    <div className="mensaje_correcto-container">
+                <div className="msg_validation">
+                    <div className="msg_validation-container msg_success">
                         <div>
                             <p>Mensaje enviado correctamente!</p>
                         </div>
-                        <div className="mensaje_correcto-button">
-                            <div className="mensaje_correcto-button_btn" onClick={()=> setMsgSuccesfully("")}>Aceptar</div>
+                        <div className="msg_validation-button">
+                            <div className="msg_validation-button_btn msg_btn-success" onClick={()=> setMsgSuccesfully("")}>Aceptar</div>
                         </div>
                     </div>
                 </div>
                 ): msgSuccesfuly === false ?
                 (
-                <div className="mensaje_correcto">
-                    <div className="mensaje_correcto-container">
+                <div className="msg_validation">
+                    <div className="msg_validation-container msg_error">
                         <div>
                             <p>Usted tiene un error en algún campo. Por favor revíselo!</p>
                         </div>
-                        <div className="mensaje_correcto-button">
-                            <div className="mensaje_correcto-button_btn" onClick={()=> setMsgSuccesfully("")}>Aceptar</div>
+                        <div className="msg_validation-button">
+                            <div className="msg_validation-button_btn msg_btn-error" onClick={()=> setMsgSuccesfully("")}>Aceptar</div>
                         </div>
                     </div>
                 </div>

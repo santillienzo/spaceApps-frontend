@@ -90,7 +90,7 @@
     transition: .5s;
 }
 
-.mensaje_correcto{
+.msg_validation{
     position: fixed;
     width: 100%;
     height: 100%;
@@ -100,38 +100,50 @@
     align-items: center;
     justify-content: center;
     transition: .5s;
+    background-color: rgba(255, 255, 255, 0.288);
 }
 
-.mensaje_correcto .mensaje_correcto-container{
-    background-color: var(--global-succesfully);
+.msg_validation .msg_validation-container{
     color: #fff;
     border-radius: 5px;
     padding: 10px;
+    margin: 0 15px;
+}
+.msg_success{
+    background-color: var(--global-succesfully);
+}
+.msg_error{
+    background-color: var(--global-error);
 }
 
-.mensaje_correcto .mensaje_correcto-container .mensaje_correcto-button{
+.msg_validation .msg_validation-container .msg_validation-button{
     display: flex;
     justify-content: flex-end;
     margin-top: 10px;
 }
 
-.mensaje_correcto-button_btn{
+.msg_validation-button_btn{
     border: 1px solid #fff;
     padding: 5px 10px;
     border-radius: 5px;
-    color: var(--global-succesfully);
     background-color: #fff;
     cursor: pointer;
     font-size: 1rem;
     transition: .5s;
 }
-.mensaje_correcto-button_btn:hover{
-    border: 1px solid #fff;
-    color: #fff;
-    background-color: var(--global-succesfully);
-    transition: .5s;
+.msg_btn-success{
+    color: var(--global-succesfully);
+}
+.msg_btn-error{
+    color: var(--global-error);
 }
 
+.msg_validation-button_btn:hover{
+    border: 1px solid #fff;
+    color: #fff;
+    transition: .5s;
+    background-color: transparent;
+}
 .errorInput{
     border-bottom: 1px solid var(--global-error) !important;
 }
