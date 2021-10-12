@@ -7,6 +7,10 @@
     padding: 1.5rem 0;
 }
 
+#contact{
+    position: relative;
+}
+
 
 .contact-form_container{
     width: 100%;
@@ -84,6 +88,52 @@
     background-color: transparent;
     color: var(--global-inverse-color);
     transition: .5s;
+}
+
+.mensaje_correcto{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+
+.mensaje_correcto .mensaje_correcto-container{
+    background-color: var(--global-succesfully);
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.mensaje_correcto .mensaje_correcto-container .mensaje_correcto-button{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.mensaje_correcto-button_btn{
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: var(--global-succesfully);
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: .5s;
+}
+.mensaje_correcto-button_btn:hover{
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: var(--global-succesfully);
+    transition: .5s;
+}
+
+.errorInput{
+    border-bottom: 1px solid var(--global-error) !important;
 }
 
 
