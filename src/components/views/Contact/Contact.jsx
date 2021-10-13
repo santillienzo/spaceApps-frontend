@@ -6,7 +6,7 @@ import mail from "../../../assets/SVG/contact/mail.svg"
 
 import SectionTitle from '../../theme/SectionTitle/SectionTitle';
 import SocialMedia from './SocialMedia/SocialMedia';
-import { sendEmail } from '../../../javascript/apiCore';
+import { createEmails, sendEmail } from '../../../javascript/apiCore';
 
 const Contact = () => {
     //STATES
@@ -17,6 +17,11 @@ const Contact = () => {
         phone: "",
         subject:"",
         message:""
+    })
+    const [dataUsers, setDataUsers] = useState({
+        name:"",
+        email:"",
+        phone:""
     })
     const expresiones = {
         nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
@@ -33,25 +38,31 @@ const Contact = () => {
     //FUNCTIONS
     const handleChange = (name, e) =>{
         setEmail({...email, [name]: e.target.value})
+        setDataUsers({
+            ...dataUsers,
+            name: email.name,
+            email: email.email,
+            phone: email.phone
+        })
     }
 
-    const validarFormulario= (name, e)=>{
+    const checkForm= (name, e)=>{
         switch (name){
             case "name":
-                validarCampo(expresiones.nombre, e.target, 'name')
+                checkField(expresiones.nombre, e.target, 'name')
             break
             case "email":
-                validarCampo(expresiones.correo, e.target, 'email')
+                checkField(expresiones.correo, e.target, 'email')
             break
             case "subject":
-                validarCampo(expresiones.asunto, e.target, 'subject')
+                checkField(expresiones.asunto, e.target, 'subject')
             break
             default: 
             break;
         }
     }
 
-    const validarCampo= (expresion, input, campo)=>{
+    const checkField= (expresion, input, campo)=>{
         if (expresion.test(input.value.trim())) {
             setField({...field, [campo]: true})
             document.getElementById(`${campo}`).classList.remove("errorInput");
@@ -65,6 +76,7 @@ const Contact = () => {
         e.preventDefault()
 
         if (field.name && field.email && field.subject) {
+            //SendEmail
             sendEmail(email)
             .then(res=>{
                 console.log(res)
@@ -72,18 +84,30 @@ const Contact = () => {
             .catch(err=>{
                 console.log(err)
             })
+
             setMsgSuccesfully(true)
+
             setField({
                 name: false,
                 email:false,
                 subject:false
             })
+
+            //Upload data user in bd
+            createEmails(dataUsers)
+            .then(res=>{
+                console.log(res)
+            })
+            .catch(err=>{
+                console.log(err)
+            })
+
             e.target.reset();
         }else{
             setMsgSuccesfully(false)
         }
-
     }
+    
 
     return (
         <>
@@ -124,31 +148,31 @@ const Contact = () => {
                     <form onSubmit={submitEmail}>
                         <input className="wow animate__animated animate__backInLeft" data-wow-delay="0s" type="text" placeholder="*Nombre y apellido" id="name"
                             onChange={(e)=>{
-                                        validarFormulario('name', e);
+                                        checkForm('name', e);
                                         handleChange('name',e);
                                     }}
                         />
                         <input className="wow animate__animated animate__backInLeft" data-wow-delay="0.1s" type="text" placeholder="*Dirección de correo electrónico" id="email"
                             onChange={(e)=>{
-                                        validarFormulario('email', e);
+                                        checkForm('email', e);
                                         handleChange('email',e);
                                     }}
                         />
                         <input className="wow animate__animated animate__backInLeft" data-wow-delay="0.2s" type="text" placeholder="Número de teléfono" id="phone"
                             onChange={(e)=>{
-                                        validarFormulario('phone', e);
+                                        checkForm('phone', e);
                                         handleChange('phone',e);
                                     }}
                         />
                         <input className="wow animate__animated animate__backInLeft" data-wow-delay="0.3s" type="text" placeholder="*Asunto" id="subject"
                             onChange={(e)=>{
-                                        validarFormulario('subject', e);
+                                        checkForm('subject', e);
                                         handleChange('subject',e);
                                     }}
                         />
                         <textarea placeholder="*Escribe tu mensaje aquí" className="wow animate__animated animate__backInLeft" data-wow-delay="0.8s" id="message"
                         onChange={(e)=>{
-                                        validarFormulario('message', e);
+                                        checkForm('message', e);
                                         handleChange('message',e);
                                     }}
                         ></textarea>
