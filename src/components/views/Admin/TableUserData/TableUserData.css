@@ -105,6 +105,12 @@
         color: var(--global-text_color);
         border-bottom: 1px solid var(--global-gray);
         padding: 5px 0;
+        transition: .5s;
+    }
+
+    .admin-user_data-table-row ul li:hover{
+        background-color: var(--global-gray);
+        transition: .5s;
     }
 
     .admin-user_data-table-column div:nth-child(1),

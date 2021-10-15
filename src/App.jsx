@@ -13,6 +13,7 @@ import Services from './components/views/Service/Services';
 import Contact from './components/views/Contact/Contact';
 import Footer from './components/layout/Footer/Footer';
 import Admin from './components/views/Admin/Admin';
+import Login from './components/views/Login/Login';
 
 function App() {
 
@@ -71,13 +72,13 @@ function App() {
   return (
     <div className="App" style={{paddingTop:`${menuResHeight}px`}}>
       <Router >
-        <Nav 
-          menuHeightNavToHome={menuHeightNavToHome}
-          setDarkMode={setDarkMode}
-          darkMode= {darkMode}
-        />
         <Switch>
           <Route path="/" exact>
+            <Nav 
+              menuHeightNavToHome={menuHeightNavToHome}
+              setDarkMode={setDarkMode}
+              darkMode= {darkMode}
+            />
             <Header/>
             <About/>
             <Services/>
@@ -85,9 +86,19 @@ function App() {
             <Footer/>
           </Route>
 
+          <Route path="/admin/login" exact>
+            <Login/>
+          </Route>
+          
           <Route path="/admin">
+            <Nav 
+              menuHeightNavToHome={menuHeightNavToHome}
+              setDarkMode={setDarkMode}
+              darkMode= {darkMode}
+            />
             <Admin/>
           </Route>
+
         </Switch>
       </Router>
     </div>

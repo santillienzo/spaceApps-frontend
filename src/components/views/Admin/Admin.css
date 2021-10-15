@@ -16,6 +16,12 @@
         align-items: center;
         padding: 10px;
         color: var(--dashboard-text_color);
+        transition: .5s;
+    }
+
+    .admin-dashboard-navDesk-items:hover{
+        filter: opacity(60%);
+        transition: .5s;
     }
 
     .admin-dashboard-navDesk-items i{

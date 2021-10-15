@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react/cjs/react.development';
-import { readEmails, removeEmails } from '../../../../javascript/apiCore';
+import { readEmails, removeEmails } from '../../../../javascript/userDataService';
 import './TableUserData.css'
 
 const TableUserData = ()=>{

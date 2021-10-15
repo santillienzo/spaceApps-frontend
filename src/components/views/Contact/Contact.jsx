@@ -6,7 +6,7 @@ import mail from "../../../assets/SVG/contact/mail.svg"
 
 import SectionTitle from '../../theme/SectionTitle/SectionTitle';
 import SocialMedia from './SocialMedia/SocialMedia';
-import { createEmails, sendEmail } from '../../../javascript/apiCore';
+import { createEmails, sendEmail } from '../../../javascript/userDataService';
 
 const Contact = () => {
     //STATES
