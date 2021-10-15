@@ -7,7 +7,6 @@ import {
 
 const NavDesktop = ({logo, setDarkMode}) => {
 
-
     return (
         <div className="navDesk-container">
             <div className="navDesk-logo  animate__animated animate__backInRight">

@@ -1,0 +1,36 @@
+/* ///////////////////////// */
+@media screen and (min-width: 780px){
+    .admin-dashboard-container{
+        display: flex;
+        height: 100vh;
+    }
+    
+    .admin-dashboard-navDesk{
+        width: 15%;
+        padding-top: 79px;
+    }
+
+    .admin-dashboard-navDesk-items{
+        display: grid;
+        grid-template-columns: 20% 80%;
+        align-items: center;
+        padding: 10px;
+        color: var(--dashboard-text_color);
+    }
+
+    .admin-dashboard-navDesk-items i{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .admin-dashboard-navDesk-items .link{
+        margin-left: 15px;
+    }
+
+    .admin-dashboard-data-container{
+        width: 85%;
+        box-shadow: inset 0 0 3px 0 #000;
+        background-color: var(--dashboard-background);
+        padding-top: 79px;
+    }
+}

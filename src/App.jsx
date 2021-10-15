@@ -12,6 +12,7 @@ import About from './components/views/AboutUs/About';
 import Services from './components/views/Service/Services';
 import Contact from './components/views/Contact/Contact';
 import Footer from './components/layout/Footer/Footer';
+import Admin from './components/views/Admin/Admin';
 
 function App() {
 
@@ -37,6 +38,9 @@ function App() {
       style.setProperty('--global-social_media-background', 'var(--global-primary-color)');
 
       style.setProperty('--global-menu_res-background', 'var(--global-gray4)');
+
+      style.setProperty('--dashboard-text_color', 'var(--global-gray)');
+      style.setProperty('--dashboard-background', 'var(--global-gray4)');
     }else{
       style.setProperty('--global-primary-color', 'var(--ligth-primary-color)');
       style.setProperty('--global-secondary-color', 'var(--ligth-secondary-color)');
@@ -49,6 +53,9 @@ function App() {
       style.setProperty('--global-social_media-background', 'var(--global-gray)');
       
       style.setProperty('--global-menu_res-background', 'var(--global-gray)');
+      
+      style.setProperty('--dashboard-text_color', 'var(--global-gray3)');
+      style.setProperty('--dashboard-background', 'var(--global-ligth-gray)');
     }
   }
 
@@ -75,9 +82,13 @@ function App() {
             <About/>
             <Services/>
             <Contact/>
+            <Footer/>
+          </Route>
+
+          <Route path="/admin">
+            <Admin/>
           </Route>
         </Switch>
-        <Footer/>
       </Router>
     </div>
   );

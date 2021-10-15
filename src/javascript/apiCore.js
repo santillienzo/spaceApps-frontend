@@ -23,7 +23,6 @@ export const sendEmail = async email => {
 
 // Crear Emails
 export const createEmails = async data => {
-    console.log(data)
     return await axios.post(`${uri}email/create-email-bd`, data, config.headers)
     .then(res => {
         return console.log(res.data);
@@ -33,12 +32,24 @@ export const createEmails = async data => {
 }
 
 // Leer emails
-export const readEmails = ()=>{
-
+export const readEmails = () =>{
+    return fetch(
+        `${uri}email/read-email-bd`,
+        {
+            method: 'GET',
+        }
+    )
+    .then(response =>{
+        return response.json()
+    })
+    .catch(err => console.log(err))
 }
 
 // Eliminar Emails
-export const removeEmails = ()=>{
-
+export const removeEmails = (id)=>{
+    axios.delete(`${uri}email/delete-email-bd/${id}`)
+    .then(res=>{
+        console.log(res)
+    })
 }
 

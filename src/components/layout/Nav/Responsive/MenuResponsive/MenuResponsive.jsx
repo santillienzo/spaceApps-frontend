@@ -4,6 +4,7 @@ import './MenuResponsive.css'
 import {
     Link as LinkScroll 
 } from 'react-scroll'
+import { Route } from 'react-router';
 
 const MenuResponsive = ({close, menuHeight, setDarkMode, darkMode})=>{
 
@@ -44,6 +45,12 @@ const MenuResponsive = ({close, menuHeight, setDarkMode, darkMode})=>{
                                 <span className="check"></span>
                             </label>
                         </div>
+                        <Route path="/admin">
+                            <div className="admin-dashboard-navRes">
+                                <LinkScroll className="li" to="home" onClick={handleClose} activeClass="activeResponsiveLink" spy>Datos de clientes</LinkScroll>
+                            </div>
+
+                        </Route>
                     </nav>
                 </div>
             </div>

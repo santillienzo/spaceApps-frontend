@@ -33,6 +33,7 @@ a{
 }
 
 :root{
+  /* Variables generales */
   --global-primary-color: var(--ligth-primary-color);
   --global-secondary-color: var(--ligth-secondary-color);
   --global-tertiary-color: var(--ligth-tertiary-color);
@@ -42,7 +43,12 @@ a{
   --global-input_border-color: var(--global-gray3);
   --global-social_media-background: var(--global-gray);
   --global-menu_res-background: var(--global-gray);
+  /* Variables dashboard */
+  --dashboard-text_color: var(--global-gray3);
+  --dashboard-background: var(--global-ligth-gray);
 
+  /* Colores */
+  --global-ligth-gray: #F7F7FF;
   --global-gray:#D9D9D9;
   --global-gray2:#8C8C8C;
   --global-gray3:#595959;
