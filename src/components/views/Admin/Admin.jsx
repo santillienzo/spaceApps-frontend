@@ -20,11 +20,11 @@ const Admin = () => {
                 <div className="admin-dashboard-navDesk">
                     <div className="admin-dashboard-navDesk-items">
                         <i className="fas fa-user-friends"></i>
-                        <Link to="/admin" className="link">Correos</Link>
+                        <Link to="/admin/dashboard" className="link">Correos</Link>
                     </div>
                 </div>
                 <div className="admin-dashboard-data-container">
-                    <Route path="/admin" exact>
+                    <Route path="/admin/dashboard" exact>
                         <TableUserData/>
                     </Route>
                 </div>

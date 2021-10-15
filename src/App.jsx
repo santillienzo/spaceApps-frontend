@@ -14,6 +14,7 @@ import Contact from './components/views/Contact/Contact';
 import Footer from './components/layout/Footer/Footer';
 import Admin from './components/views/Admin/Admin';
 import Login from './components/views/Login/Login';
+import { isAuthenticated } from './javascript/adminUserService';
 
 function App() {
 
@@ -90,13 +91,26 @@ function App() {
             <Login/>
           </Route>
           
-          <Route path="/admin">
-            <Nav 
-              menuHeightNavToHome={menuHeightNavToHome}
-              setDarkMode={setDarkMode}
-              darkMode= {darkMode}
-            />
-            <Admin/>
+          <Route path="/admin/dashboard">
+            {
+              isAuthenticated() ?
+              (
+                <>
+                  <Nav 
+                    menuHeightNavToHome={menuHeightNavToHome}
+                    setDarkMode={setDarkMode}
+                    darkMode= {darkMode}
+                  />
+                  <Admin/>
+                </>
+              )
+              :
+              (
+                <div className="not-found-cartel">
+                  Página no encontrada
+                </div>
+              )
+            }
           </Route>
 
         </Switch>

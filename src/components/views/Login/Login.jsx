@@ -57,7 +57,7 @@ const Login = () => {
 
     const redirectUser = () => {
         if (isAuthenticated()) {
-            return <Redirect to="/admin"/>
+            window.location.href = "/admin/dashboard"
         }
     }
     
