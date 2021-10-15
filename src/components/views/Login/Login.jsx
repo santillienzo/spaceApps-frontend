@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './Login.css'
 import logo from '../../../assets/Logo/Logo_orange.png'
 import { authenticate, isAuthenticated, signin } from '../../../javascript/adminUserService';
-import { Redirect } from 'react-router';
 
 
 const Login = () => {
@@ -15,7 +14,7 @@ const Login = () => {
     });
 
     const {username, password, loading, error} = values; 
-    const {adminUser} = isAuthenticated();
+    // const {adminUser} = isAuthenticated();
 
     const handleChange = name => event =>{
         setValues({...values, error:false, [name]: event.target.value})

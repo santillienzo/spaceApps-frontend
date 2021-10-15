@@ -1,15 +1,7 @@
 // const axios = require("axios")
 
-// const uri= `https://space-apps-back.herokuapp.com/`;
-const uri= `http://localhost:5000/`;
-
-const config = {
-    headers: {
-        Accept: 'application/json',
-        "Content-Type": 'application/json',
-        'Access-Control-Allow-Origin': '*',
-    }
-};
+const uri= `https://space-apps-back.herokuapp.com/`;
+// const uri= `http://localhost:5000/`;
 
 export const signin = (adminUser)=>{
     return fetch(`${uri}admin/signin`, {
